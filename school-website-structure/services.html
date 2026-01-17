@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services & Educators | Young Dream Early Learning Academy</title>
+
+    <meta name="description" content="Explore our early childhood education services and meet our qualified educators at Young Dream Early Learning Academy.">
+    <meta name="keywords" content="early learning, preschool, daycare, educators, child development">
+    <meta name="author" content="Young Dream Early Learning Academy">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Services & Educators">
+    <meta property="og:description" content="Quality early learning programs led by caring educators.">
+    <meta property="og:image" content="images/hero.png">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- ================= INLINE CSS ================= -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #fefbe9; 
+        }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: #a2d149; /* index green */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navigation a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .navigation a.active {
+            color: #fce488; /* index yellow */
+        }
+
+        /* HERO */
+        .main {
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .main h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* SECTIONS */
+        .services {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: #3a6b35; /* index dark green */
+        }
+
+        /* VERTICAL SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #a2d149; /* index green */
+            margin-bottom: 15px;
+        }
+
+        /* EDUCATORS */
+        .educator-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .educator-card {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .educator-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #a2d149;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <a href="index.html" class="brand">
+        <img src="images/ydela logo.png" class="logo" alt="YDELA Logo">
+        YDELA
+    </a>
+
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html">About Us</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="main" style="background-image:url('images/hero.png')">
+    <div>
+        <h2>Our Services</h2>
+        <p>Quality care for every stage of early development</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <h2 class="section-title">What We Offer</h2>
+
+    <div class="services-grid">
+        <div class="card">
+            <div class="service-icon"><i class="fas fa-baby"></i></div>
+            <h3>Baby Stimulation Programs</h3>
+            <p>
+                At Young Dream Early Learning Academy, we are committed to nurturing young minds through engaging baby
+                stimulation programs designed to strengthen cognitive and creative development.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>Individual Learning</h3>
+            <p>Personalised learning plans respecting each child’s pace.</p>
+        </div>
+
+        <div class="card">
+            <div class="service-icon"><i class="fas fa-utensils"></i></div>
+            <h3>After Care</h3>
+            <p>
+                We provide baby sitting services beyond operating hours, maintaining strict health and safety standards
+                in a nurturing environment.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATORS -->
+<section class="services" style="background:#fefbe9">
+    <h2 class="section-title">Our Educators</h2>
+
+    <div class="services-grid">
+        <div class="card educator-card" onclick="openModal('edu1')">
+            <img src="images/educator1.jpg" alt="Educator">
+            <h3>Mrs. Tshabalala</h3>
+            <p>Founder and Director</p>
+        </div>
+
+        <div class="card educator-card" onclick="openModal('edu2')">
+            <img src="images/Shumi.jpg" alt="Educator">
+            <h3>Ms Mpisane</h3>
+            <p>Child Development Specialist / Educator</p>
+        </div>
+
+        <div class="card educator-card" onclick="openModal('edu3')">
+            <img src="images/educator2.jpg" alt="Educator">
+            <h3>Ms Mthanti</h3>
+            <p>Educator</p>
+        </div>
+    </div>
+</section>
+
+<!-- MODALS -->
+<div class="modal" id="edu1">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('edu1')">&times;</span>
+        <h3>Mrs. Tshabalala</h3>
+        <p>With a deep passion for early childhood education, Mrs. Tshabalala leads our team with vision and care.</p>
+    </div>
+</div>
+
+<div class="modal" id="edu2">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('edu2')">&times;</span>
+        <h3>Ms Mpisane</h3>
+        <p>Ms. Mpisane brings creativity and warmth to the classroom, ensuring every child thrives.</p>
+    </div>
+</div>
+
+<div class="modal" id="edu3">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('edu3')">&times;</span>
+        <h3>Ms. Mthanti</h3>
+        <p>Ms. Mthanti supports children’s well-being through attentive care and healthy routines.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Young Dream Early Learning Academy</p>
+</footer>
+
+<!-- INLINE JS -->
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "flex";
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(e) {
+        document.querySelectorAll('.modal').forEach(m => {
+            if (e.target === m) m.style.display = "none";
+        });
+    }
+</script>
+
+</body>
+</html>

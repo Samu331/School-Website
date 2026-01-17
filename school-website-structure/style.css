@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fefbe9; /* Soft yellow background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #a2d149; /* Soft green */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+header.sticky {
+    background: #8cbf3f;
+}
+
+header .brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .brand .logo {
+    width: 40px;
+    height: 40px;
+}
+
+header .navigation {
+    display: flex;
+    gap: 20px;
+}
+
+header .navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Mobile Menu */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+/* Hero */
+.main {
+    height: 100vh;
+    background: url('images/hero.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.main h2 {
+    color: #3a6b35; /* Darker green */
+    font-size: 2rem;
+}
+
+.main span {
+    color: #fce488; /* Soft yellow */
+    font-weight: bold;
+}
+
+.main p {
+    color: #333;
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: 10px 25px;
+    background: #fce488;
+    color: #3a6b35;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f9e357;
+}
+
+/* About Section */
+.about {
+    padding: 100px 20px 50px;
+    text-align: center;
+
+    /* ✅ Background image added */
+    background:
+        linear-gradient(rgba(254, 251, 233, 0.9), rgba(254, 251, 233, 0.9)),
+        url('images/About US.jpg') center/cover no-repeat;
+}
+
+.about .title p {
+    max-width: 700px;
+    margin: 10px auto 40px;
+    font-size: 1rem;
+}
+
+/* Flip Cards */
+.about-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flip-card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4,0.2,0.2,1);
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+/* Hover flip desktop */
+@media (hover: hover) and (pointer: fine) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Flip for mobile click */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-front h3 {
+    margin-top: 15px;
+    color: #a2d149;
+}
+
+.flip-card-back {
+    background: #fce488;
+    transform: rotateY(180deg);
+    color: #333;
+}
+
+/* Programs Section */
+.work {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.programs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.program-card {
+    background: #fff;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.services-grid .card {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.services-grid .service-icon {
+    font-size: 2rem;
+    color: #a2d149;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+
+    /* ✅ Background image added */
+    background:
+        linear-gradient(rgba(254, 251, 233, 0.92), rgba(254, 251, 233, 0.92)),
+        url('images/contact.png') center/cover no-repeat;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-cards .card {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+}
+
+/* Application Form */
+.application-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.application-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.application-form input,
+.application-form textarea {
+    padding: 10px;
+    border: 1px solid #a2d149;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.application-form textarea {
+    resize: vertical;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #a2d149;
+    color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        gap: 10px;
+        background: #8cbf3f;
+        padding: 10px;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background: #fff;
+        position: relative;
+    }
+
+    .menu-btn::before, .menu-btn::after {
+        content: "";
+        width: 35px;
+        height: 5px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .menu-btn::before { top: -10px; }
+    .menu-btn::after { top: 10px; }
+
+    .menu-btn.active::before { transform: rotate(45deg) translate(5px,5px); }
+    .menu-btn.active::after { transform: rotate(-45deg) translate(5px,-5px); }
+
+    .about-boxes,
+    .programs,
+    .services-grid,
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
